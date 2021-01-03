@@ -60,7 +60,8 @@ ul li a {
 
 ul li a:hover {
   font-weight: 700;
-  font-size: 1.25rem;
+
+  transition: all 0.3s ease;
 }
 
 /* burger Icon */
@@ -75,6 +76,7 @@ ul li a:hover {
   background-color: white;
   margin: 5px;
   border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 800px) {
@@ -117,4 +119,14 @@ ul li a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.rotate .pati-1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.rotate .pati-2 {
+  opacity: 0;
+}
+.rotate .pati-3 {
+  transform: rotate(-45deg) translate(5px, -6px);
 }

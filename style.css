@@ -9,6 +9,7 @@
 body {
   background-color: #181719;
   color: #ffffff;
+  overflow: hidden;
 }
 header {
   padding-top: 3.125rem;
@@ -64,14 +65,15 @@ ul li a:hover {
 
 /* burger Icon */
 .burger {
-  padding-right: 50px;
+  margin-right: 50px;
   display: none;
+  cursor: pointer;
 }
 .burger div {
   width: 25px;
-  height: 4px;
+  height: 3px;
   background-color: white;
-  margin: 5px 0;
+  margin: 5px;
   border-radius: 8px;
 }
 
@@ -79,14 +81,17 @@ ul li a:hover {
   ul {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 89vh;
+    top: 11vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    transform: translateY(-111%);
+    transition: transform 0.7s ease-in-out;
   }
   ul li {
+    opacity: 0;
     height: 10%;
   }
 
@@ -96,5 +101,20 @@ ul li a:hover {
 
   .burger {
     display: block;
+  }
+}
+
+.nav-active {
+  transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
